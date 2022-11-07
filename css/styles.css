@@ -9,6 +9,18 @@
   --secondary-accent-color: rgba(255, 255, 255, 0.6);
   --active-bgc-button: #188ce8;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
 body {
   background-color: var(--main-white-color);
   font-family: Roboto, sans-serif;
@@ -17,16 +29,6 @@ body {
 
 header {
   border-bottom: 1px solid #ececec;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
 }
 
 .list {
@@ -221,6 +223,14 @@ button {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/backgroudhero.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title-one {
@@ -251,6 +261,62 @@ button {
   margin-right: 30px;
 
   /* background-color: tomato; */
+}
+
+.feature-list .item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  border-radius: 4px;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--main-bgc-grey);
+  margin-bottom: 30px;
+}
+
+.header-nav::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  background-image: url(../image/envelope.svg);
+}
+
+.header-contact::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  /* outline: 2px solid red; */
+  background-image: url(../image/smartphone.svg);
+}
+
+.icon-antenna::before {
+  background-image: url(../image/antenna.svg);
+}
+
+.icon-smartphone::before {
+}
+
+.icon-clock::before {
+  background-image: url(../image/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../image/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../image/astronaut.svg);
 }
 
 .feature-list .section-title {
@@ -401,6 +467,9 @@ button {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .card-title > .card-description {
@@ -421,16 +490,16 @@ button {
 .title-portfolio .card-description {
   /* padding-left: 24px;
   padding-bottom: 30px; */
-  border-right: 1px solid #eeeeee;
+  /* border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee; */
 }
 
 .title-portfolio .card-title {
   /* padding-left: 24px;
   padding-top: 20px; */
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  /* border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee; */
   /* padding-top: 20px; */
   /* padding-bottom: 10px; */
   /* margin-bottom: 4px; */
@@ -449,6 +518,37 @@ button {
 
 .link-hero {
   text-decoration: none;
+}
+
+.section-five {
+  color: var(--main-text-color);
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  text-decoration: none;
+  content: "";
+  display: flex;
+  height: 92px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--main-bgc-grey);
+
+  outline: 2px solid red;
+  gap: 30px;
+}
+
+.clients {
+  width: 170px;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  
+
+  
 }
 
 .footer-section {
