@@ -152,6 +152,8 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  margin-right: 10px;
+  align-self: center;
   /* outline: 2px solid blueviolet; */
 }
 .header-contact {
@@ -161,24 +163,28 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  margin-right: 10px;
+  align-self: center;
   /* outline: 2px solid red; */
 }
 
 .header-contact:hover,
+.icon-envelope:hover,
 .header-contact:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
 .header-mail:hover,
+.icon-smartphone:hover,
 .header-mail:focus {
   color: var(--accent-color);
-  /* fill: var(--accent-color); */
+  fill: var(--accent-color);
 }
 
-.icon-envelope:hover {
-  /* background-color: var(--accent-color); */
-}
+/* .header-mail::before:hover{
+fill: var(--accent-color);
+} */
 
 .button-hero {
   color: var(--main-white-color);
@@ -227,9 +233,7 @@ button {
 }
 
 .section-one {
-  /* max-width: 1600px;
-  height: 600px; */
-  
+  margin: 0 auto;
   background-color: var(--secondary-bgc);
   text-align: center;
   padding-top: 200px;
@@ -242,6 +246,9 @@ button {
     url(../image/backgroudhero.png);
   background-repeat: no-repeat;
   background-position: center;
+  height: 600px;
+  max-width: 1600px;
+  background-size: cover;
 }
 
 .title-one {
@@ -286,7 +293,7 @@ button {
   margin-bottom: 30px;
 }
 
-.header-nav::before {
+.header-mail::before {
   /* content: "";
   display: block;
   height: 16px;
@@ -298,19 +305,7 @@ button {
   background-image: url(../image/envelope.svg); */
 }
 
-.header-mail::before {
-  content: "";
-  display: block;
-  height: 16px;
-  width: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 10px;
-  background-image: url(../image/envelope.svg);
-}
-
-.header-contact::before {
+/* .header-contact::before {
   content: "";
   display: block;
   height: 16px;
@@ -319,8 +314,17 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 10px;
-  /* outline: 2px solid red; */
+  outline: 2px solid red;
   background-image: url(../image/smartphone.svg);
+} */
+
+.icon-envelope,
+.icon-smartphone {
+  display: inline-block;
+  display: flex;
+  align-self: center;
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
 }
 
 .icon-antenna::before {
@@ -368,7 +372,7 @@ button {
   /* border: 1px solid #EEEEEE; */
 }
 
-.card-item:hover {
+.link-hero:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -547,6 +551,7 @@ button {
 }
 
 .link-hero {
+  display: block;
   text-decoration: none;
 }
 
@@ -675,8 +680,6 @@ button {
   height: 44px;
 }
 
-
-
 .net-link {
   display: flex;
   align-items: center;
@@ -765,8 +768,6 @@ footer {
   margin-right: 70px;
 }
 
-
-
 .net-item {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -779,12 +780,11 @@ footer {
   color: var(--main-white-color);
 }
 
-
 .footer-link > .social-link {
   margin: 0;
 }
 
-.join-link > .link-icon{
+.join-link > .link-icon {
   fill: var(--main-white-color);
 }
 
